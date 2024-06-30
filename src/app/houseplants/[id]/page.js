@@ -51,6 +51,12 @@ export default async function HouseplantPage({params}) {
     return (
         <main>
             {/* PAGE CONTENT */}
+
+            <hr />
+            <p className="page-title">(Admin Actions: <Link href={`${houseplant.id}/edit`}><button>Edit Entry</button></Link>)</p>
+            <hr />
+
+            
             <section>
 
             <div className="entry-title">
@@ -78,8 +84,7 @@ export default async function HouseplantPage({params}) {
             </div>
             </section>
 
-            <hr />
-            <p className="page-title">(Admin Actions: <Link href={`${houseplant.id}/edit`}><button>Edit Entry</button></Link>)</p>
+
             <hr />
             <br />
 
