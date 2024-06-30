@@ -1,95 +1,27 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// IMPORT MODULES
+import Image from "next/image"
+import Link from "next/link"
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+// PAGE - HOMEPAGE
+export default function Homepage() {
+    return (
+        <main className="homepage">
+            <h1 className="page-title homepage-title">Welcome!</h1>
+            <section className="homepage-section">
+                <div className="homepage-text">
+                    <p>
+                    Welcome to the Houseplant Care Database, your ultimate resource for nurturing greenery indoors. Our platform is dedicated to empowering plant enthusiasts with comprehensive care guides, expert tips, and troubleshooting solutions to ensure your leafy companions thrive in any environment. Whether you're a seasoned gardener or a beginner, our curated database offers tailored advice on watering schedules, light requirements, pest management, and more.
+                    </p>
+                    <p>
+                    Join our community and cultivate healthier, happier plants with confidence, supported by our passion for greener living. Discover the joy of successful houseplant care today with the Houseplant Care Database.
+                    </p>
+                </div>
+                <Image src="https://i.imgur.com/DpnCV7R.jpeg" width={300} height={300} className="homepage-img"/>
+            </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+            <Link href="/houseplants"><h2 className="big-button">Find your houseplant now! →</h2></Link>
+            
+        </main>
+    )
 }
